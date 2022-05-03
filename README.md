@@ -11,6 +11,8 @@
 
 Estructura de Proyecto Lab de Compu II - 2022
 
+Link al sitio: [proyecto2022-Brick_Breaker](https://ucc-labcompu2.github.io/proyecto2022-blason_kostrun/)
+
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
@@ -32,8 +34,8 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [X] La página principal debe llamarse index
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
-- [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
+- [X] Se debe emplear algún favicon
+- [X] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [ ] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML
