@@ -8,11 +8,40 @@
     <link rel="stylesheet" href="pagina1.css" type="text/css">
     <title>Play</title>
     <style>
-
+        /* Estilo del canvas */
+       #lienzo{
+           background-color: #dc2be2;
+           display: flex;
+       }
+       section{
+           width: 500px;
+           position: absolute;
+           top: 240px;
+           right: 430px;
+           font-size: 500%;
+           border: ridge gray;
+       }
     </style>
 </head>
 <body>
-<div class="cuadrado"></div>
-<div class="rectangulo"></div>
+
+   <header>
+       <a href="#" class="logo">
+           <!--<img src="Imagenes/logo4-brickbreaker.jpg" alt="logo del juego">  -->
+           <h2 class="nombre juego"> Puntos </h2>
+           <h2 class="nombre juego"> Nivel </h2>
+           <h2 class="nombre juego"> Vidas</h2>
+       </a>
+       <nav> <!--
+           <a href="" class="nav:link"> Inicio </a>
+           <a href="" class="nav:link"> Nosotros </a>
+           <a href="" class="nav:link"> Contacto </a>-->
+       </nav>
+   </header>
+  <section id="dibujo">
+      <canvas id="lienzo" width="500px" height="300">
+          Su navegador no soporta el canvas
+      </canvas>
+  </section>
 </body>
 </html>
