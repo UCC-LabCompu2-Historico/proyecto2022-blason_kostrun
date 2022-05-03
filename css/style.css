@@ -27,6 +27,7 @@ header div {
 
 img {
     margin-bottom: 3%;
+    border: ridge yellow 3px;
 }
 
 section#reglas {
@@ -70,12 +71,17 @@ input {
 
 div#botonInicio {
     text-align: center;
+
 }
 
 button {
     border-radius: 50px;
     background-color: rgb(51, 20, 87);
     padding: 8px 13px 8px 13px;
+
+}
+.boton:hover{
+    font-size: 1.4em;
 }
 
 a {
@@ -98,3 +104,4 @@ footer p {
     color: white;
     margin: 2%;
 }
+
