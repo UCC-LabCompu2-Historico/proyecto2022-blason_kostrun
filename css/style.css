@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    color: yellow;
+    font-size: 350%;
+    border: ridge yellow 3px;
+    margin-top: 6%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+header div {
+    display: inline-block;
+    margin-left: 18%;
+}
+
+img {
+    margin-bottom: 3%;
+}
+
+section#reglas {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+div.Reglas {
+    background-color: rgb(100, 36, 160);
+    border: ridge yellow 3px;
+    padding: 3%;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+ol li {
+    color: yellow;
+}
+
+div#formulario {
+    margin-left: 15%;
+}
+
+form {
+    margin: 0 0 2% 30%;
+    padding: 4px;
+
+}
+
+input {
+    border-radius: 30px;
+    padding: 6px;
+    font-size: 138%;
+}
+
+
+div#botonInicio {
+    text-align: center;
+}
+
+button {
+    border-radius: 50px;
+    background-color: rgb(51, 20, 87);
+    padding: 8px 13px 8px 13px;
+}
+
+a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;
+    color: aliceblue; 
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+    background-color: rgb(74, 33, 112);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: white;
+    margin: 2%;
+}

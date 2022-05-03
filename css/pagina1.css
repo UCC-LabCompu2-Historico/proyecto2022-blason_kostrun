@@ -1,11 +1,16 @@
+* {
+    margin: 0;
+}
+
 body{
     background-color: blueviolet;
     font-family: sans-serif;
-    margin: 0;
 }
-a{
-    text-decoration: none;
+
+h2 {
     color: black;
+    font-family: 'Tapestry', cursive;
+    margin: 0 2% 0 2%;
 }
 
 header{
@@ -17,25 +22,38 @@ header{
     padding: 10px;
     border: ridge gray;
 }
-.encabezado{
+
+#lienzo{
+    background-color: #dc2be2;
     display: flex;
-    align-items: center;
-}
-.encabezado img{
-    height: 50px;
-    margin-right: 10px;
-}
-.encabezado h2{
-    font-weight: 600;
-    padding-right: 550px;
 }
 
-nav a{
-    font-weight: 600;
-    padding-right: 10px;
+section{
+    width: 500px;
+    position: absolute;
+    top: 240px;
+    right: 430px;
+    font-size: 500%;
+    border: ridge gray;
 }
 
-@media (max-width: 700px) { /* opcion encontrada en google, lo utilice para centrarlo bien  */
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: 90%;
+}
+
+footer a img {
+    width: 60%;
+}
+
+
+
+
+
+/*
+
+@media (max-width: 700px) { opcion encontrada en google, lo utilice para centrarlo bien 
     header {
         flex-direction: column;
         padding: 10px 0px;
@@ -50,6 +68,8 @@ nav a{
     font-size: 300%;
 
 }
+
+*/
 
 
 

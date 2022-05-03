@@ -6,69 +6,61 @@
     <meta content="Agostina Blason" name="autor">
     <meta content="Roy Kostrun" name="autor">
     <meta content="ladrillos, pelota, barra, niveles" name="palabras-clave">
-    <link rel="stylesheet" href="nuestrosEstilos.css" type="text/css">
-
-    <style>
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
+
 <body>
-
-<img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
-
-<div>
-    <p>
-    <h1 class="Borde">
-        <header>BRICK BREAKER</header>
-    </h1>
-    </p>
-
-</div>
-<section>
-    <div class="Reglas">
-        <aside>
-            <h3 class="las_Reglas"> Reglas:</h3>
-            <ol class="items_reglas">
-                <li style="color: yellow; position: absolute;top: 270px;right: 124px;">
-                    Utilice < > para mover la barra
-                </li>
-                <li style="color: yellow; position: absolute;top: 300px;right: 21px;">
-                    Pulse la barra espaciadora para disparar la bola
-                </li>
-            </ol>
-        </aside>
-    </div>
-
-</section>
-<section>
-    <div class="contendor_inicie_nombre">
+    <header>
+        <img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
         <div>
-            <form>
-                <p>
-                    <label class="label_nombre" for="nombre">
-                        Nombre:
-                    </label>
-                    <input class="input_nombre" type="text" name="nombre" placeholder="Nombre" id="nombre">
-                </p>
-            </form>
+            <h1 class="Borde">BRICK BREAKER</h1>
         </div>
-        <div>
-            <nav>
-                <a class="nombre_clase" href="pagina1.html"
-                   style="color: aliceblue; position: absolute; top: 300px; right: 860px">
-                    Inicie
-                </a>
-            </nav>
-        </div>
-    </div>
 
-    <p class="mail" style="color: white; position: absolute;top: 600px;right: 920px" for="nombre">
-        Mail: 2116571@ucc.edu.ar
-    </p>
-    <p class="contact" style="color: white; position: absolute;top: 639px;right: 970px" for="nombre">
-        Contacto: 3513723648
-    </p>
-</section>
+        <section id="reglas">
+            <div class="Reglas">
+                    <h3 class="las_Reglas"> Reglas:</h3>
+                    <ol class="items_reglas">
+                        <li>
+                            Pulse enter para disparar
+                        </li>
+                        <li>
+                            Utilice < > para mover la barra
+                        </li>
+                        <li>
+                            Pulse la barra espaciadora para disparar la bola
+                        </li>
+                        <li>
+                            El juego termina cuando la pelota pasa la barra
+                        </li>
+                    </ol>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+
+        <section>
+                <div id="formulario">
+                    <form class="formulario" action="#" method=GET>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: ">
+                    </form>
+                </div>
+
+                <div id="botonInicio">
+                    <button class="boton" type="button"><a class="nombre_clase" href="./pagina1.html">¡INICIE!</a></button>
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="contacto">
+            2116571@ucc.edu.ar - 3513723648
+        </p>
+    </footer>
+
 </body>
 
 </html>
