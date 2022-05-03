@@ -20,7 +20,7 @@
   <!--<header> <h1>Brick Breaker</h1> </header>
 
   from the table we have this: border: 1px solid #000000; -->
-
+  <div>
   <center>
       <p class="Borde">
              <h1 style="color: yellow;position: absolute; top: 10px; right: 410px; border: ridge yellow 3px">
@@ -28,51 +28,50 @@
              </h1>
           </p>
   </center>
-
+ </div>
     <center><nav>
-        <a href="pagina1.html" style="color: aliceblue; position: absolute; top: 300px; right: 860px">
-            Inicie
-        </a>
+
+            <a href="pagina1.html" target="_blank" style="color: aliceblue; position: absolute; top: 300px; right: 860px">
+                Inicie
+            </a>
+
       </nav>
      </center>
 
 
      <section>
         <div class="Reglas">
-               <p st>
-
-                   <ul style="color: white;position: absolute;top: 205px;right: 290px"> Reglas: </ul>
-
-               </p>
-
+            <aside>
+                <h3 style="color: white;position: absolute;top: 205px;right: 290px"> Reglas:</h3>
+                    <ol>
+                            <li style="color: yellow; position: absolute;top: 270px;right: 124px;">
+                                 Utilice < > para mover la barra
+                            </li>
+                                <li style="color: yellow; position: absolute;top: 300px;right: 21px;">
+                                     Pulse la barra espaciadora para disparar la bola
+                                </li>
+                    </ol>
+            </aside>
         </div>
-          <div>
-           <table>
-               <tr>
-                   <td style="color: yellow; position: absolute;top: 270px;right: 120px;  text-indent: -2em;">
-                       - Utilice < > para mover la barra </td>
-               </tr>
-               <tr>
-                   <td style="color: yellow; position: absolute;top: 300px;right: -3px;text-indent: -2em;">
-                       - Pulse la barra espaciadora para disparar la bola
-                   </td>
-               </tr>
-           </table>
-
-
-          </div>
-           <div>
-               <form id="suscripcion_usuario">
-                   <p>
-                         <label style="color: white; position: absolute;top: 240px;right: 830px" for="nombre">
-                           Nombre:
-                         </label>
-                       <input type="text" name="nombre" placeholder="Nombre" id="nombre" style="color: black; position: absolute;top: 240px;right: 535px">
-                   </p>
-               </form>
-
-           </div>
 
      </section>
-</body>
+        <div>
+          <form id="suscripcion_usuario">
+            <p>
+             <label style="color: white; position: absolute;top: 240px;right: 830px" for="nombre">
+                 Nombre:
+             </label>
+             <input type="text" name="nombre" placeholder="Nombre" id="nombre" style="color: black; position: absolute;top: 240px;right: 535px">
+            </p>
+          </form>
+        </div>
+
+       <p class="mail" style="color: white; position: absolute;top: 600px;right: 920px" for="nombre">
+           Mail:  2116571@ucc.edu.ar
+       </p>
+       <p class="contact" style="color: white; position: absolute;top: 670px;right: 1130px" for="nombre">
+           Contacto
+       </p>
+
+  </body>
 </html>

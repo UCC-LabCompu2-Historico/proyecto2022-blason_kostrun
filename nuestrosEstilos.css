@@ -19,7 +19,7 @@ input{
 .Reglas{
     float: right;
     width: 18%;
-    font-size: 180%;
+    font-size: 100%;
 
 }
 table, tr, td, th{
@@ -37,4 +37,13 @@ img{
 }
 a{
     font-size: 180%;
+}
+.mail{
+    font-size: 180%;
+}
+.contact{
+    font-size: 180%;
+}
+ol{
+
 }
