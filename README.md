@@ -46,7 +46,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [X] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener
   color de fondo, algún logotipo, etc.
 - [X] Debe haber por lo menos una etiqueta ```<img>``` en la página.
-- [ ] La estructura de la página debe estar definida con ```<div></div>```
+- [X] La estructura de la página debe estar definida con ```<div></div>```
 - [ ] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al
   usuario ingresar valores para poder realizar un cálculo de un ejercicio.
 - [X] Debe contener un ```<canvas>```, para que posteriormente (en la 2da etapa) se grafique alguna imagen
@@ -67,10 +67,10 @@ Estructura de Proyecto Lab de Compu II - 2022
 
 ### Sobre Accesibilidad:
 
-- [ ] Toda imagen debe tener su etiqueta alt
-- [ ] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
-- [ ] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia)
-- [ ] Si hay una tabla en la página, debe contener ```<caption></caption>```
+- [X] Toda imagen debe tener su etiqueta alt
+- [X] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
+- [X] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia)
+- [X] Si hay una tabla en la página, debe contener ```<caption></caption>```
 
 ### Sobre las correcciones
 

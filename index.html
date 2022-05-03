@@ -13,65 +13,61 @@
     </style>
 </head>
 <body>
- <canvas id="myCanvas" width="1342" height="900" style="border: 1px solid #d3d3d3">
 
- </canvas>
-  <img src="Imagenes/logo4-brickbreaker.jpg" width="175" height="175" style="position: absolute; top: 10px;left: 100px; border: ridge yellow 5px" mar>
-  <!--<header> <h1>Brick Breaker</h1> </header>
+<img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
 
-  from the table we have this: border: 1px solid #000000; -->
-  <div>
-  <center>
-      <p class="Borde">
-             <h1 style="color: yellow;position: absolute; top: 10px; right: 410px; border: ridge yellow 3px">
-              <header>BRICK BREAKER</header>
-             </h1>
-          </p>
-  </center>
- </div>
-    <center><nav>
+<div>
+    <p>
+    <h1 class="Borde">
+        <header>BRICK BREAKER</header>
+    </h1>
+    </p>
 
-            <a href="pagina1.html" target="_blank" style="color: aliceblue; position: absolute; top: 300px; right: 860px">
+</div>
+<section>
+    <div class="Reglas">
+        <aside>
+            <h3 class="las_Reglas"> Reglas:</h3>
+            <ol class="items_reglas">
+                <li style="color: yellow; position: absolute;top: 270px;right: 124px;">
+                    Utilice < > para mover la barra
+                </li>
+                <li style="color: yellow; position: absolute;top: 300px;right: 21px;">
+                    Pulse la barra espaciadora para disparar la bola
+                </li>
+            </ol>
+        </aside>
+    </div>
+
+</section>
+<section>
+<div class="contendor_inicie_nombre">
+    <div>
+        <form>
+            <p>
+                <label class="label_nombre" for="nombre">
+                    Nombre:
+                </label>
+                <input class="input_nombre" type="text" name="nombre" placeholder="Nombre" id="nombre">
+            </p>
+        </form>
+    </div>
+    <div>
+        <nav>
+            <a class="nombre_clase" href="pagina1.html"
+               style="color: aliceblue; position: absolute; top: 300px; right: 860px">
                 Inicie
             </a>
+        </nav>
+    </div>
+</div>
 
-      </nav>
-     </center>
-
-
-     <section>
-        <div class="Reglas">
-            <aside>
-                <h3 style="color: white;position: absolute;top: 205px;right: 290px"> Reglas:</h3>
-                    <ol>
-                            <li style="color: yellow; position: absolute;top: 270px;right: 124px;">
-                                 Utilice < > para mover la barra
-                            </li>
-                                <li style="color: yellow; position: absolute;top: 300px;right: 21px;">
-                                     Pulse la barra espaciadora para disparar la bola
-                                </li>
-                    </ol>
-            </aside>
-        </div>
-
-     </section>
-        <div>
-          <form id="suscripcion_usuario">
-            <p>
-             <label style="color: white; position: absolute;top: 240px;right: 830px" for="nombre">
-                 Nombre:
-             </label>
-             <input type="text" name="nombre" placeholder="Nombre" id="nombre" style="color: black; position: absolute;top: 240px;right: 535px">
-            </p>
-          </form>
-        </div>
-       <section style="border: ridge yellow 4px">
-       <p class="mail" style="color: white; position: absolute;top: 600px;right: 920px" for="nombre">
-           Mail:  2116571@ucc.edu.ar
-       </p>
-       <p class="contact" style="color: white; position: absolute;top: 670px;right: 1130px" for="nombre">
-           Contacto
-       </p>
-       </section>
-  </body>
+<p class="mail" style="color: white; position: absolute;top: 600px;right: 920px" for="nombre">
+    Mail: 2116571@ucc.edu.ar
+</p>
+<p class="contact" style="color: white; position: absolute;top: 639px;right: 970px" for="nombre">
+    Contacto: 3513723648
+</p>
+</section>
+</body>
 </html>

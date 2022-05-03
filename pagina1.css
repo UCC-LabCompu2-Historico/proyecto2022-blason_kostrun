@@ -17,15 +17,15 @@ header{
     padding: 10px;
     border: ridge gray;
 }
-.logo{
+.encabezado{
     display: flex;
     align-items: center;
 }
-.logo img{
+.encabezado img{
     height: 50px;
     margin-right: 10px;
 }
-.logo h2{
+.encabezado h2{
     font-weight: 600;
     padding-right: 550px;
 }
@@ -34,13 +34,22 @@ nav a{
     font-weight: 600;
     padding-right: 10px;
 }
-nav a:hover{
-    color: white;
-}
-@media (max-width: 700px) {
+
+@media (max-width: 700px) { /* opcion encontrada en google, lo utilice para centrarlo bien  */
     header {
         flex-direction: column;
         padding: 10px 0px;
     }
 }
+.icono_flecha{
+    width: 175px;
+    height: 175px;
+    position:absolute;
+    top: 500px;
+    right: 100px;
+    font-size: 300%;
+
+}
+
+
 
