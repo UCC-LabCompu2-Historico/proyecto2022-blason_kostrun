@@ -1,6 +1,8 @@
 # "" Brick Breaker""" ( proyecto2022 )
 
-  Esta pagina consiste en el desarrollo de un juego conocido como " Brick Breaker "
+  Esta pagina consiste en el desarrollo de la primera parte de un juego conocido como " Brick Breaker ",
+  en esta  parte de proyecto se podra encontrar el codigo minimo indispensable para la estructura 
+  principal del diseño de nuestra pagina web. 
 
    ## Autores:
    * Blason, Agostina.
@@ -17,26 +19,26 @@ Link al sitio: [proyecto2022-Brick_Breaker](https://ucc-labcompu2.github.io/proy
 
 ### Sobre el Repositorio
 
-- [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2022-ApellidoAlumno1-ApellidoAlumno2"
-- [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con
+- [X] El proyecto debe estar subido al repositorio adecuado "Proyecto2022-ApellidoAlumno1-ApellidoAlumno2"
+- [X] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con
   nombre y apellido, link de gh-pages, contenido de la página, listado de tecnologías usadas, etc)
   - [X] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los
     sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o
     JPG).
 - [X] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe
   haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
-- [ ] Publicar la Web empleando GitHubPages
+- [X] Publicar la Web empleando GitHubPages
 - [x] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **
   .gitignore**)
 
 ### Sobre el Proyecto General
 
 - [X] La página principal debe llamarse index
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [X] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [X] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [X] Se debe emplear algún favicon
 - [X] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
-- [ ] Debe haber navegación entre todas las páginas
+- [X] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML
 
@@ -63,7 +65,7 @@ Link al sitio: [proyecto2022-Brick_Breaker](https://ucc-labcompu2.github.io/proy
 
 - [X] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos
   o emplear estilos incrustados).
-- [ ] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
+- [X] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
 - [X] Se debe emplear pseudoclase
 - [X] No emplear !important
 
