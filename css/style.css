@@ -22,6 +22,7 @@ header {
 }
 
 header div {
+    position: relative;
     display: inline-block;
     margin-left: 18%;
 }

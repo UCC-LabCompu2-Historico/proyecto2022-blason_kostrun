@@ -1,0 +1,61 @@
+/*
+// seleccionando el elemento canvas
+const cvs = document.getElementById("lienzo");
+const ctx = cvs.getContext("2d"); // contexto del canvas
+
+// hacemos la linea mas gruesa
+
+ctx.lineWidth = 2;
+
+const PADDLE_WIDTH = 100;
+
+const PADDLE_MARGIN_BOTTOM = 50;
+
+const PADDLE_HEIGHT = 20;
+
+// creamos un panel
+const paddle = {
+    x : cvs.width/2 - PADDLE_WIDTH/2,
+    y : cvs.height - PADDLE_MARGIN_BOTTOM - PADDLE_HEIGHT,
+    width : PADDLE_WIDTH,
+    height : PADDLE_HEIGHT,
+    dx : 5
+}
+
+// dibujamos la paleta
+
+function drawPaddle(){
+    ctx.fillStyle = "#2e3548";
+    ctx.fillRect (paddle.x, paddle.y, paddle.width, paddle.height ); // metodo de relleno
+    ctx.strokeStyle = "#ffcd05"; // dubujamos un trazo
+    ctx.strokeRect( paddle.x, paddle.y, paddle.width, paddle.height );
+}
+
+// control de paleta
+
+document.addEventListener("keydown", function (event){
+    if(event.keyCode == 37){
+        leftArrow = true;
+    }
+})
+
+
+// funcion para crear un circulo
+// dibujamos la funcion
+function draw(){
+    drawPaddle();
+}
+// movemos la paleta para arribaa, la paleta actua como si repitiera un ciclo de clonacion
+function update(){
+
+}
+
+function loop(){
+    //ctx.drawImage(backGroundIm, 0, 0); // toma la imagen en si misma, la posicion X e Y
+    draw();
+    update();
+    requestAnimationFrame(loop);
+}
+loop();
+
+ */
