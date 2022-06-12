@@ -8,9 +8,10 @@ body {
 
 h1 {
     color: yellow;
-    font-size: 350%;
+    font-size: 230%;
     border: ridge yellow 3px;
     margin-top: 6%;
+
 }
 
 header {
@@ -53,7 +54,7 @@ ol li {
 }
 
 div#formulario {
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 form {
