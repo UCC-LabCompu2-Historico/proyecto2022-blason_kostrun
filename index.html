@@ -7,17 +7,17 @@
     <meta content="Roy Kostrun" name="autor">
     <meta content="ladrillos, pelota, barra, niveles" name="palabras-clave">
     <meta content="MI PRIMERO VIDEOJUEGO - JUEGO BÁSICO ESTILO BRICK-BREAKER" name="description">
-    <!-- <meta content="Aprendé como jugar Brick Breacker( Rompe Ladrillos )" name="description"> -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="shortcut icon" href="Imagenes/logo4-brickbreaker.jpg">
+    <script src="./css/game.js"></script>
 </head>
 
 <body>
 <header>
     <img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
     <div>
-        <h1 class="Borde">BRICK BREAKER</h1>
+        <h1 class="Borde" >BRICK BREAKER</h1>
     </div>
 
     <section id="reglas">
@@ -44,7 +44,7 @@
     <section>
         <div id="formulario">
             <form class="formulario" action="#" method=GET>
-                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: ">
+                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: " onchange="ingreseSuNombre(this.id, this.value)">
             </form>
         </div>
 

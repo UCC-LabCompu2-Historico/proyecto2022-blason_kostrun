@@ -24,19 +24,24 @@ header{
     border: ridge gray;
 }
 
+main {
+    text-align: center;
+}
+
 #lienzo{
-    background-color: #dc2be2;
+    background-image: url(./../Imagenes/posibleImagendeFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    border: ridge gray;
     display: flex;
-    margin: 0;
 }
 
 section{
     width: 500px;
     position: absolute;
-    top: 180px;
-    right: 287px;
+    top: 126px;
     font-size: 500%;
-    border: ridge gray;
+    margin-left: 36.5%;
 }
 
 footer {
@@ -48,11 +53,3 @@ footer {
 footer a img {
     width: 60%;
 }
-
-
-
-
-
-
-
-

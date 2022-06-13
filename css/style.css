@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
 }
@@ -6,12 +7,12 @@ body {
     background-color: blueviolet;
 }
 
+
 h1 {
     color: yellow;
-    font-size: 230%;
+    font-size: 250%;
     border: ridge yellow 3px;
     margin-top: 6%;
-
 }
 
 header {
@@ -22,9 +23,9 @@ header {
 }
 
 header div {
-    position: relative;
     display: inline-block;
-    margin-left: 18%;
+    margin-top: 2.5%;
+    margin-left: 22%;
 }
 
 img {
@@ -33,10 +34,10 @@ img {
 }
 
 section#reglas {
-    margin-top: 7%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-left: 6%;
 }
 
 div.Reglas {
@@ -62,6 +63,10 @@ form {
     margin: 0 0 2% 30%;
     padding: 4px;
 
+}
+
+label {
+    margin-right: 2%;
 }
 
 input {

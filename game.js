@@ -67,7 +67,7 @@ function keyUpHandler(event) {
         presionadoIzquierdo = false;
     }
 }
-/*
+
 var ladrillo = {
       alto:20,
       ancho:75,
@@ -101,7 +101,7 @@ var ladrillo = {
            }
        }
    }
-   */
+
 
 function dibujar(){
     canvas.width = canvas.width;
@@ -129,3 +129,10 @@ function dibujar(){
 }
 setInterval(dibujar, 10); // llamamos una funcioncada cierto tiempo
 
+
+function ingreseSuNombre(id, valor){
+    if (isNaN(valor)){
+        alert(" Dato Invalido " + id);
+
+    }
+}
