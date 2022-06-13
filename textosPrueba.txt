@@ -59,3 +59,418 @@ function loop(){
 loop();
 
  */
+
+////////////////////////////index.html///////////////////////////
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Brick Breaker</title>
+    <meta content="Agostina Blason" name="autor">
+    <meta content="Roy Kostrun" name="autor">
+    <meta content="ladrillos, pelota, barra, niveles" name="palabras-clave">
+    <meta content="MI PRIMERO VIDEOJUEGO - JUEGO BÁSICO ESTILO BRICK-BREAKER" name="description">
+    <!-- <meta content="Aprendé como jugar Brick Breacker( Rompe Ladrillos )" name="description"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="shortcut icon" href="Imagenes/logo4-brickbreaker.jpg">
+</head>
+
+<body>
+<header>
+    <img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
+    <div>
+        <h1 class="Borde">BRICK BREAKER</h1>
+    </div>
+
+    <section id="reglas">
+        <div class="Reglas">
+            <h3 class="las_Reglas"> Reglas:</h3>
+            <ol class="items_reglas">
+                <li>
+                    Pulse la barra espaciadora para disparar la bola
+                </li>
+                <li>
+                    Utilice < > para mover la barra
+                </li>
+                <li>
+                    El juego termina cuando la pelota pasa la barra
+                </li>
+            </ol>
+        </div>
+    </section>
+
+</header>
+
+<main>
+
+    <section>
+        <div id="formulario">
+            <form class="formulario" action="#" method=GET>
+                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: ">
+            </form>
+        </div>
+
+        <div id="botonInicio">
+            <button class="boton" type="button"><a class="nombre_clase" href="./pagina1.html">¡INICIE!</a></button>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><!-- class="contacto" -->
+        2116571@ucc.edu.ar - 3513723648
+    </p>
+</footer>
+
+</body>
+
+</html>
+
+/////////////////////////////////style.css////////////////////////
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    color: yellow;
+    font-size: 230%;
+    border: ridge yellow 3px;
+    margin-top: 6%;
+
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+header div {
+    position: relative;
+    display: inline-block;
+    margin-left: 18%;
+}
+
+img {
+    margin-bottom: 3%;
+    border: ridge yellow 3px;
+}
+
+section#reglas {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+div.Reglas {
+    background-color: rgb(100, 36, 160);
+    border: ridge yellow 3px;
+    padding: 3%;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+ol li {
+    color: yellow;
+}
+
+div#formulario {
+    margin-left: 10%;
+}
+
+form {
+    margin: 0 0 2% 30%;
+    padding: 4px;
+
+}
+
+input {
+    border-radius: 30px;
+    padding: 6px;
+    font-size: 138%;
+}
+
+
+div#botonInicio {
+    text-align: center;
+
+}
+
+button {
+    border-radius: 50px;
+    background-color: rgb(51, 20, 87);
+    padding: 8px 13px 8px 13px;
+
+}
+.boton:hover{
+    font-size: 1.4em;
+}
+
+a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+    background-color: rgb(74, 33, 112);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: white;
+    margin: 2%;
+}
+
+.estilo_nombre{
+    font-size: 110%;
+}
+
+//////////////////////////pagina1.html////////////////////
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Brick Breaker</title>
+    <meta content="Agostina Blason" name="autor">
+    <meta content="Roy Kostrun" name="autor">
+    <meta content="Web del juego: Brick Breaker">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pagina1.css" type="text/css">
+    <link rel="shortcut icon" href="Imagenes/logo4-brickbreaker.jpg">
+    <title>Play</title>
+</head>
+<body>
+
+<header>
+    <h2 class="nombre juego"> Puntos </h2>
+    <h2 class="nombre juego"> Nivel </h2>
+    <h2 class="nombre juego"> Vidas</h2>
+</header>
+
+<main>
+    <section id="dibujo">
+        <canvas id="lienzo" width="400px" height="500" >
+            Su navegador no soporta el canvas
+        </canvas>
+    </section>
+</main>
+
+<footer>
+    <a class="icono_flecha"  href="index.html" >
+        <img src="Imagenes/iconoFlecha.png" alt="This is a image of the icon">
+    </a>
+</footer>
+  <script src="game.js"></script>
+<!--  <script src="componentes.js"></script>   -->
+
+</body>
+</html>
+////////////////////////////////////pagina1.css///////////////////////
+
+* {
+    margin: 0;
+}
+
+body{
+    background-color: blueviolet;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: black;
+    font-family: 'Tapestry', cursive;
+    margin: 0 2% 0 2%;
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background: #a52be2;
+    justify-content: space-between;
+    align-items: center;/* para centrar */
+    padding: 10px;
+    border: ridge gray;
+}
+
+#lienzo{
+    background-color: #dc2be2;
+    display: flex;
+    margin: 0;
+}
+
+section{
+    width: 500px;
+    position: absolute;
+    top: 180px;
+    right: 287px;
+    font-size: 500%;
+    border: ridge gray;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: 90%;
+}
+
+footer a img {
+    width: 60%;
+}
+
+//////////////////////////////////////////// game.js////////////////////
+
+var canvas = document.getElementById("lienzo");
+var ctx = canvas.getContext("2d");
+
+// dibujamos una Pelota
+
+var x = canvas.width;
+var y = canvas.height - 10;
+
+var dx = 2;
+var dy = -2;
+
+
+var pelota = {
+    radio : 10,
+    dibujar: function (){
+        ctx.beginPath();
+        ctx.arc(x, y, this.radio, 0, 2*Math.PI); // radio de l bola = 10, la pelota completa es de 0 a 2*mathh.Pi
+        ctx.fillStyle = "black";
+        ctx.fill(); // pintamos la pelota
+        ctx.closePath();
+    }
+};
+
+const PADDLE_WIDTH = 100;
+
+const PADDLE_MARGIN_BOTTOM = 50;
+
+const PADDLE_HEIGHT = 20;
+
+var barra = {
+    x : canvas.width/2 - PADDLE_WIDTH/2,
+    y : canvas.height - PADDLE_MARGIN_BOTTOM - PADDLE_HEIGHT,
+    width : PADDLE_WIDTH,
+    height : PADDLE_HEIGHT,
+    dx : 5,
+    ancho:75,
+    alto:10,
+    posicionX: (canvas.width - 75)/2,
+    draw: function (){
+        ctx.beginPath();
+        ctx.fillStyle = "#2e3548";
+        ctx.fillRect(this.posicionX,462, this.ancho, this.alto);
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
+  var presionadoDerecho = false;
+  var presionadoIzquierdo = false;
+
+  document.addEventListener("keydown",keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
+
+  function keyDownHandler(event) {
+      if (event.keyCode === 39){ // keyCode del boton derecho = 39
+          presionadoDerecho = true;
+      } else if (event.keyCode === 37){ // keyCode del boton izquierdo = 39
+          presionadoIzquierdo = true;
+      }
+  }
+
+function keyUpHandler(event) {
+    if (event.keyCode === 39){ // keyCode del boton derecho = 39
+        presionadoDerecho = false;
+    } else if (event.keyCode === 37){ // keyCode del boton izquierdo = 39
+        presionadoIzquierdo = false;
+    }
+}
+
+var ladrillo = {
+      alto:20,
+      ancho:75,
+
+};
+  var filas = 3;
+  var columnas = 5;
+  var espacio = 10;
+  var espacioSuperior = 30;
+  var espacioIzquierdo =30;
+
+  var cuadroLadrillos = []; // co este codigo hpasamos por todas filas/columnas y creamos los ladrillos
+   for (i = 0; i < columnas; i++){
+       cuadroLadrillos[i] = [];
+       for (j=0; j < filas; j++){
+           cuadroLadrillos[i][j] = { x: 0, y : 0};
+       }
+   }
+   function drawCuadroLadrillos(){
+       for (i = 0; i < columnas; i++){
+           for (j=0; j < filas; j++){
+               cuadroLadrillos[i][j].x = 0;
+               cuadroLadrillos[i][j].y = 0;
+               ctx.beginPath();
+               // posicion de ladrillos
+               var ladrilloX = (i * (ladrillo.ancho + espacio)) + espacioIzquierdo;
+               var ladrilloY = ( j * (ladrillo.alto + espacio)) + espacioSuperior;
+               ctx.fillRect(ladrilloX,ladrilloY, ladrillo.ancho, ladrill.alto);
+               ctx.fill();
+               ctx.closePath();
+           }
+       }
+   }
+
+
+function dibujar(){
+    canvas.width = canvas.width;
+    // rebotamos la pelota izquirda / derecha || arriba / abajo
+     if (x + dx < 0 || x + dx > canvas.width){
+         dx = -dx;
+     }
+    if (y + dy < 0 || y + dy > canvas.height){
+        dy = -dy;
+    }
+
+    // movemos la barra a la derecha / izquierda
+    if (presionadoDerecho && barra.posicionX < canvas.width - barra.ancho){
+         barra.posicionX = barra.posicionX + 7;
+
+    } else if (presionadoIzquierdo && barra.posicionX > 0){
+        barra.posicionX = barra.posicionX - 7;
+    }
+    pelota.dibujar();
+    barra.draw();
+
+
+    x = x + dx;
+    y = y + dy;
+}
+setInterval(dibujar, 10); // llamamos una funcioncada cierto tiempo
+
+
+function ingreseSuNombre(id, valor){
+    if (isNaN(valor)){
+        alert(" Dato Invalido " + id);
+
+    }
+}
