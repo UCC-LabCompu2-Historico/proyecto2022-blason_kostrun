@@ -196,7 +196,11 @@ function dibujarCuadroDeLadrillos() {
         }
     }
 }
-
+/**
+ *  vaidamos los datos previamente ingresados por eso usuario
+ * @method validar
+ *
+ * **/
 function validar(){
     let nombre;
     const pattern = new RegExp('[a-zA-Z]');
