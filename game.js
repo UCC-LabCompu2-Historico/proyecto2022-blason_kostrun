@@ -5,11 +5,9 @@ var canvas = document.getElementById("lienzo");
 var ctx = canvas.getContext("2d");
 
 
-
-
 //Al dibujar la bola creamos dos variables x e y, comenzamos el dibujo con beginPath
 
-var x = canvas.width/2;
+var x = canvas.width / 2;
 var y = canvas.height - 10;
 
 
@@ -32,9 +30,9 @@ var pelota = {
      *
      */
 
-    dibujar: function (){
+    dibujar: function () {
         ctx.beginPath();
-        ctx.arc(x, y, this.radio,0 , 2*Math.PI); // puede llegar a tener 5 parametros, si yo quiero la pelota dibujada a la mitad de x y de y, this.radio es el radio declarado, y la pelota completa de 0 a 2*Math.PI
+        ctx.arc(x, y, this.radio, 0, 2 * Math.PI); // puede llegar a tener 5 parametros, si yo quiero la pelota dibujada a la mitad de x y de y, this.radio es el radio declarado, y la pelota completa de 0 a 2*Math.PI
         ctx.fillStyle = "pink";             // para asignarle un color
         ctx.fill();                         // pintamos la pelota
         ctx.closePath();                    // termino el path de dibujo
@@ -59,7 +57,7 @@ var barra = {
      * @method dibujar
      *
      */
-    dibujar: function (){
+    dibujar: function () {
         ctx.beginPath();
         ctx.fillRect(this.posicionX, 450, this.ancho, this.alto); // dibujamos el rectangulo
         ctx.fillStyle = "#dc7497";
@@ -78,27 +76,27 @@ var barra = {
  *
  */
 
-function dibujar(){
-    canvas.width =canvas.width;
+function dibujar() {
+    canvas.width = canvas.width;
 
-    if (x + dx < pelota.radio || x + dx > canvas.width-pelota.radio){
-        dx =- dx;
+    if (x + dx < pelota.radio || x + dx > canvas.width - pelota.radio) {
+        dx = -dx;
     }
     if (y + dy < pelota.radio) {
-        dy =- dy;
+        dy = -dy;
     }
-    if (y + dy > canvas.height-pelota.radio){
-        if(x > barra.posicionX && x < barra.ancho+barra.posicionX){
-            dy =-dy;
-        } else{
+    if (y + dy > canvas.height - pelota.radio) {
+        if (x > barra.posicionX && x < barra.ancho + barra.posicionX) {
+            dy = -dy;
+        } else {
             alert("Perdiste");
         }
 
     }
 
-    if (presionadoDerecho && barra.posicionX < canvas.width - barra.ancho){
+    if (presionadoDerecho && barra.posicionX < canvas.width - barra.ancho) {
         barra.posicionX += 7;           // para que se mueva a la derecha
-    } else if (presionadoIzquierdo && barra.posicionX > 0){
+    } else if (presionadoIzquierdo && barra.posicionX > 0) {
         barra.posicionX -= 7;           // para moverse a la izquierda
     }
 
@@ -109,17 +107,18 @@ function dibujar(){
     x = x + dx;
     y = y + dy;
 }
+
 setInterval(dibujar, 10);
 
 
 /**
-* Movemos la barra
-*document.addEvenListener - pulsado de teclas
-*keyDownHandler - Al pulsar cualquier tecla la funcion se ejecutará
-*keyUpHandler - cuando se libere el boton pulsado
-**/
+ * Movemos la barra
+ *document.addEvenListener - pulsado de teclas
+ *keyDownHandler - Al pulsar cualquier tecla la funcion se ejecutará
+ *keyUpHandler - cuando se libere el boton pulsado
+ **/
 
-var presionadoDerecho  = false;          // para decir que no va a estar presionado inicialmente
+var presionadoDerecho = false;          // para decir que no va a estar presionado inicialmente
 var presionadoIzquierdo = false;
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -131,10 +130,10 @@ document.addEventListener("keyup", keyUpHandler, false);
  *@param {//tipo de parametro} event-
  */
 
-function keyDownHandler(event){
-    if (event.keyCode === 39){           // verificamos boton derecho cuyo keycode es 39
+function keyDownHandler(event) {
+    if (event.keyCode === 39) {           // verificamos boton derecho cuyo keycode es 39
         presionadoDerecho = true;
-    } else if ( event.keyCode === 37 ){  // verificamos boton izquierdo cuyo keycode es 39
+    } else if (event.keyCode === 37) {  // verificamos boton izquierdo cuyo keycode es 39
         presionadoIzquierdo = true;
     }
 }
@@ -148,10 +147,10 @@ function keyDownHandler(event){
  */
 
 
-function keyUpHandler(event){
-    if (event.keyCode === 39){
+function keyUpHandler(event) {
+    if (event.keyCode === 39) {
         presionadoDerecho = false;
-    } else if ( event.keyCode === 37 ){
+    } else if (event.keyCode === 37) {
         presionadoIzquierdo = false;
     }
 }
@@ -160,7 +159,7 @@ function keyUpHandler(event){
 
 var ladrillo = {
     alto: 20,
-    ancho:75,
+    ancho: 75,
 };
 var filas = 4;
 var columnas = 4;
@@ -170,10 +169,10 @@ var espadioIzquierdo = 30;
 
 //Pasamos por las filas / columnas y creamos los ladrillos
 var cuadroDLadrillos = [];
-for (i = 0; i < columnas ; i++){
+for (i = 0; i < columnas; i++) {
     cuadroDLadrillos[i] = [];
-    for (j = 0; j < filas; j++){
-        cuadroDLadrillos[i][j] = {x: 0, y: 0 };
+    for (j = 0; j < filas; j++) {
+        cuadroDLadrillos[i][j] = {x: 0, y: 0};
     }
 }
 
@@ -198,5 +197,17 @@ function dibujarCuadroDeLadrillos() {
     }
 }
 
+function validar(){
+    let nombre;
+    const pattern = new RegExp('[a-zA-Z]');
+
+    nombre = document.getElementById('nombre').value;
+    if (!pattern.test(nombre)){
+        alert("Porfavor ingrese su nombre con letras unicamente");
+       nombre = "";
+    } else{
+       // window.open('pagina1.html');
+    }
+}
 
 

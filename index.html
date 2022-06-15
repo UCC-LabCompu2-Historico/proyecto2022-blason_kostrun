@@ -12,12 +12,12 @@
     <link rel="shortcut icon" href="Imagenes/logo4-brickbreaker.jpg">
     <script src="game.js"></script>
 </head>
-
+<script src="game.js"></script>
 <body>
 <header>
     <img src="Imagenes/logo4-brickbreaker.jpg" class="imagen_logo" alt=" This is a image of the logo">
     <div>
-        <h1 class="Borde" >BRICK BREAKER</h1>
+        <h1 class="Borde">BRICK BREAKER</h1>
     </div>
 
     <section id="reglas">
@@ -39,17 +39,19 @@
 
 </header>
 
-<main >
+<main>
 
     <section>
         <div id="formulario">
             <form class="formulario" action="#" method=GET>
-                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: ">
+                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre"
+                                                                                placeholder="Ingrese su nombre: ">
             </form>
         </div>
 
         <div id="botonInicio">
-            <button class="boton" type="button"><a class="nombre_clase" href="./pagina1.html" onclick="">¡INICIE!</a></button>
+            <button class="boton" type="button" onclick="validar()"><a class="nombre_clase" href="./pagina1.html">¡INICIE!</a>
+            </button>
         </div>
     </section>
 
@@ -60,7 +62,7 @@
     </p>
 </footer>
 
-<script src="game.js"></script>
+
 
 </body>
 

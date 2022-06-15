@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-body{
+body {
     background-color: blueviolet;
     font-family: sans-serif;
 }
@@ -14,12 +14,12 @@ h2 {
     margin: 0 2% 0 2%;
 }
 
-header{
+header {
     display: flex;
     min-height: 70px;
     background: #a52be2;
     justify-content: space-between;
-    align-items: center;/* para centrar */
+    align-items: center; /* para centrar */
     padding: 10px;
     border: ridge gray;
 }
@@ -28,7 +28,7 @@ main {
     text-align: center;
 }
 
-#lienzo{
+#lienzo {
     background-image: url(./../Imagenes/posibleImagendeFondo.jpg);
     background-repeat: no-repeat;
     background-size: 200%;
@@ -36,7 +36,7 @@ main {
     display: flex;
 }
 
-section{
+section {
     width: 500px;
     position: absolute;
     top: 126px;

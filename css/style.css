@@ -87,7 +87,8 @@ button {
     padding: 8px 13px 8px 13px;
 
 }
-.boton:hover{
+
+.boton:hover {
     font-size: 1.4em;
 }
 
@@ -112,7 +113,7 @@ footer p {
     margin: 2%;
 }
 
-.estilo_nombre{
+.estilo_nombre {
     font-size: 110%;
 }
 
