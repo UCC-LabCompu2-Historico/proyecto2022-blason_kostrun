@@ -204,9 +204,9 @@ function validar(){
     nombre = document.getElementById('nombre').value;
     if (!pattern.test(nombre)){
         alert("Porfavor ingrese su nombre con letras unicamente");
-       nombre = "";
+        nombre = "";
     } else{
-       // window.open('pagina1.html');
+        window.open('./pagina1.html');
     }
 }
 
