@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="shortcut icon" href="Imagenes/logo4-brickbreaker.jpg">
-    <script src="./css/game.js"></script>
+    <script src="game.js"></script>
 </head>
 
 <body>
@@ -39,27 +39,28 @@
 
 </header>
 
-<main>
+<main >
 
     <section>
         <div id="formulario">
             <form class="formulario" action="#" method=GET>
-                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: " onchange="ingreseSuNombre(this.id, this.value)">
+                <label class="estilo_nombre" for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre: ">
             </form>
         </div>
 
         <div id="botonInicio">
-            <button class="boton" type="button"><a class="nombre_clase" href="./pagina1.html">¡INICIE!</a></button>
+            <button class="boton" type="button"><a class="nombre_clase" href="./pagina1.html" onclick="">¡INICIE!</a></button>
         </div>
     </section>
 
 </main>
-
 <footer>
     <p><!-- class="contacto" -->
         2116571@ucc.edu.ar - 3513723648
     </p>
 </footer>
+
+<script src="game.js"></script>
 
 </body>
 
