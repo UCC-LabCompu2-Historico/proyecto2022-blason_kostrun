@@ -172,7 +172,7 @@ var cuadroDLadrillos = [];
 for (i = 0; i < columnas; i++) {
     cuadroDLadrillos[i] = [];
     for (j = 0; j < filas; j++) {
-        cuadroDLadrillos[i][j] = {x: 0, y: 0};
+        cuadroDLadrillos[i][j] = {x: 0, y: 0, status: 1};
     }
 }
 
@@ -185,14 +185,17 @@ for (i = 0; i < columnas; i++) {
 function dibujarCuadroDeLadrillos() {
     for (i = 0; i < columnas; i++) {
         for (j = 0; j < filas; j++) {
-            cuadroDLadrillos[i][j].x = 0;
-            cuadroDLadrillos[i][j].y = 0;
-            var ladrilloX = (i * (ladrillo.ancho + espacio)) + espadioIzquierdo;
-            var ladrilloY = (j * (ladrillo.alto + espacio)) + espacioDerecho;
-            ctx.beginPath();
-            ctx.fillRect(ladrilloX, ladrilloY, ladrillo.ancho, ladrillo.alto);
-            ctx.fill();
-            ctx.closePath();
+            if (cuadroDLadrillos[i][j].status == 1 ){
+                cuadroDLadrillos[i][j].x = 0;
+                cuadroDLadrillos[i][j].y = 0;
+                var ladrilloX = (i * (ladrillo.ancho + espacio)) + espadioIzquierdo;
+                var ladrilloY = (j * (ladrillo.alto + espacio)) + espacioDerecho;
+                ctx.beginPath();
+                ctx.fillRect(ladrilloX, ladrilloY, ladrillo.ancho, ladrillo.alto);
+                ctx.fill();
+                ctx.closePath();
+            }
+
         }
     }
 }
@@ -211,6 +214,18 @@ function validar(){
         nombre = "";
     } else{
         window.open('./pagina1.html');
+    }
+}
+
+function colision(){
+    for ( i = 0; i < columnas; i++ ){
+        for ( j = 0; j < filas; j++ ){
+            var b = cuadroDLadrillos[i][j];
+            if ( x > b.x && x < b.x + ladrillo.ancho && y > b.y && y < b.y + ladrillo.alto ){
+                dy = -dy;
+                b.status = 0; // si hubo colision se deja de dibujar
+            }
+        }
     }
 }
 
