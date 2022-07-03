@@ -1,9 +1,22 @@
 //Para comenzar a dibujar, creamos una variable canvas a la cual hacemos referencia con el document.getElementById
 //Creamos la variable context ctx para poder acceder a todas los metodos particulares del canvas
 
+function welcome(){
+
+    if ( localStorage.getItem( "firstLogin" )  == 1 ){
+        window.alert('Su puntaje anterior fue: ' + localStorage.getItem("userScore") + '. Utilice las teclas < > para mover la barra. Aceptar para empezar ');
+    } else {
+        window.alert('Bienvenido ' + localStorage.getItem("userName") + '. Utilice las teclas < > para mover la barra. Aceptar para empezar ');
+        localStorage.setItem( "firstLogin", 1 );
+    }
+}
+
+
+
 var canvas = document.getElementById("lienzo");
 var ctx = canvas.getContext("2d");
 
+var vidas = 3;
 
 //Al dibujar la bola creamos dos variables x e y, comenzamos el dibujo con beginPath
 
@@ -39,6 +52,8 @@ var pelota = {
     }
 };
 
+
+
 //Movimiento de la bola
 //canvas.width =canvas.width --> Limpiamos el canvas
 //Para que algo se dibuje repetitivamente cada cierto tiempo usamos la función setInterval()
@@ -59,7 +74,7 @@ var barra = {
      */
     dibujar: function () {
         ctx.beginPath();
-        ctx.fillRect(this.posicionX, 450, this.ancho, this.alto); // dibujamos el rectangulo
+        ctx.fillRect(this.posicionX, canvas.height - 10, this.ancho, this.alto); // dibujamos el rectangulo
         ctx.fillStyle = "#dc7497";
         ctx.fill();
         ctx.closePath();
@@ -79,6 +94,10 @@ var barra = {
 function dibujar() {
     canvas.width = canvas.width;
 
+
+    vidas = vidas;
+
+    localStorage.setItem("vidasRemaining", vidas);
     if (x + dx < pelota.radio || x + dx > canvas.width - pelota.radio) {
         dx = -dx;
     }
@@ -88,8 +107,16 @@ function dibujar() {
     if (y + dy > canvas.height - pelota.radio) {
         if (x > barra.posicionX && x < barra.ancho + barra.posicionX) {
             dy = -dy;
-        } else {
-            alert("Perdiste");
+        }
+        else {
+            if ( vidas > 0 ){
+                dy = -dy;
+                vidas--;
+                localStorage.setItem("vidasRemaining", vidas);
+            } else if( vidas == 0 ){
+                location.reload();
+                alert("Perdiste");
+            }
         }
 
     }
@@ -102,6 +129,9 @@ function dibujar() {
 
     pelota.dibujar();
     barra.dibujar();
+    puntaje.dibujar1();
+    lifeBAR.dibujar1();
+    colision();
     dibujarCuadroDeLadrillos();
 
     x = x + dx;
@@ -123,6 +153,7 @@ var presionadoIzquierdo = false;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+
 
 /**
  *Ejecuta la funcion al pulsar una tecla
@@ -155,6 +186,7 @@ function keyUpHandler(event) {
     }
 }
 
+
 //Definimos un objeto ladrillo y dibujamos el cuadro donde guardaremos las filas y columnas de ladrillos
 
 var ladrillo = {
@@ -177,19 +209,22 @@ for (i = 0; i < columnas; i++) {
 }
 
 
+
+
 /**
  * Dibujamos el cuadro para los ladrillos
  * @method dibujarCuadroDeLadrillos
  *
  */
 function dibujarCuadroDeLadrillos() {
-    for (i = 0; i < columnas; i++) {
-        for (j = 0; j < filas; j++) {
-            if (cuadroDLadrillos[i][j].status == 1 ){
-                cuadroDLadrillos[i][j].x = 0;
-                cuadroDLadrillos[i][j].y = 0;
-                var ladrilloX = (i * (ladrillo.ancho + espacio)) + espadioIzquierdo;
-                var ladrilloY = (j * (ladrillo.alto + espacio)) + espacioDerecho;
+    for (h = 0; h < columnas; h++) {
+        for (m = 0; m < filas; m++) {
+            if (cuadroDLadrillos[h][m].status == 1 ){
+
+                var ladrilloX = (h * (ladrillo.ancho + espacio)) + espadioIzquierdo;
+                var ladrilloY = (m * (ladrillo.alto + espacio)) + espacioDerecho;
+                cuadroDLadrillos[h][m].x = ladrilloX;
+                cuadroDLadrillos[h][m].y = ladrilloY;
                 ctx.beginPath();
                 ctx.fillRect(ladrilloX, ladrilloY, ladrillo.ancho, ladrillo.alto);
                 ctx.fill();
@@ -206,27 +241,76 @@ function dibujarCuadroDeLadrillos() {
  * **/
 function validar(){
     let nombre;
+
     const pattern = new RegExp('[a-zA-Z]');
 
     nombre = document.getElementById('nombre').value;
-    if (!pattern.test(nombre)){
+    localStorage.setItem("userName",nombre);
+    if(localStorage.getItem("userName" != nombre)){
+        localStorage.setItem("firstLogin", 0);
+    }
+    if ( nombre.length == "" ){
+        alert( " Porfavor, Ingrese su nombre ");
+    }
+     else if (!pattern.test(nombre)){
         alert("Porfavor ingrese su nombre con letras unicamente");
         nombre = "";
     } else{
-        window.open('./pagina1.html');
+        window.open('./pagina1.html', "_self");
     }
 }
 
+
+
 function colision(){
-    for ( i = 0; i < columnas; i++ ){
-        for ( j = 0; j < filas; j++ ){
-            var b = cuadroDLadrillos[i][j];
-            if ( x > b.x && x < b.x + ladrillo.ancho && y > b.y && y < b.y + ladrillo.alto ){
-                dy = -dy;
-                b.status = 0; // si hubo colision se deja de dibujar
+
+    for(c=0; c<columnas; c++) {
+        for(r=0; r<filas; r++) {
+            var b = cuadroDLadrillos[c][r];
+            if(b.status == 1) {
+                if(x > b.x && x < b.x+ladrillo.ancho && y > b.y && y < b.y+ladrillo.alto) {
+                    dy = -dy;
+                    b.status = 0;
+                    puntaje.puntos++;
+                    localStorage.setItem("userScore" , puntaje.puntos); // almacenamos en el local storage el puntaje del jugador
+                    if(puntaje.puntos == filas*columnas) {
+                        alert("GANASTE, FELICITACIONES!");
+                        location.reload();
+                    }
+                }
             }
         }
     }
 }
 
+var lifeBAR = {
+
+    dibujar1: function () {
+
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#dc7497";
+        if (vidas == 3) {
+            ctx.fillText("Vidas: ♥ ♥ ♥ ", canvas.width - 95, 20);
+        } else if (vidas == 2) {
+            ctx.fillText("Vidas: ♥ ♥ ", canvas.width - 95, 20);
+        } else if (vidas == 1) {
+            ctx.fillText("Vidas: ♥ ", canvas.width - 95, 20);
+        } else {
+            ctx.fillText("Vidas:   ☠  ", canvas.width - 95, 20);
+        }
+    },
+
+
+}
+
+var puntaje = {
+    puntos: 0,
+
+    dibujar1: function (){
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("Puntaje:" +this.puntos, 30, 20);
+
+    }
+}
 
