@@ -262,17 +262,18 @@ function validar(){
     const pattern = new RegExp('[a-zA-Z]');
 
     nombre = document.getElementById('nombre').value;
-    localStorage.setItem("userName",nombre);
-    if(localStorage.getItem("userName" != nombre)){
+
+    if(localStorage.getItem("userName") != nombre){
         localStorage.setItem("firstLogin", 0);
     }
     if ( nombre.length == "" ){
         alert( " Porfavor, Ingrese su nombre ");
     }
-     else if (!pattern.test(nombre)){
+    else if (!pattern.test(nombre)){
         alert("Porfavor ingrese su nombre con letras unicamente");
         nombre = "";
     } else{
+        localStorage.setItem("userName",nombre);
         window.open('./pagina1.html', "_self");
     }
 }

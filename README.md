@@ -15,6 +15,9 @@ Estructura de Proyecto Lab de Compu II - 2022
 
 Link al sitio: [proyecto2022-Brick_Breaker](https://ucc-labcompu2.github.io/proyecto2022-blason_kostrun/)
 
+   ## Imagen
+![This is a alt text.](/image/logo4-brickbreaker.jpg "This is a illustrative image.")
+
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
@@ -121,10 +124,10 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 
 ## Requisitos del FINAL
 
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
-- [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
-- [ ] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar,
+- [X] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
+- [X] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
+- [X] No debe haber errores JavaScript presentes (F12 > Consola)
+- [X] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar,
   si hay nuevos inputs de html deben contener su label, etc)
-- [ ] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
+- [X] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
 - [ ] El cálculo del ejercicio de física/etc debe ser el correcto, independientemente de los valores ingresados.
