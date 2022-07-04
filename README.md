@@ -16,7 +16,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 Link al sitio: [proyecto2022-Brick_Breaker](https://ucc-labcompu2.github.io/proyecto2022-blason_kostrun/)
 
    ## Imagen
-![This is a alt text.](/image/logo4-brickbreaker.jpg "This is a illustrative image.")
+![This is a illustrative image.](/image/logo4-brickbreaker.jpg "This is a illustrative image.")
 
 ## Requisitos del Primer Parcial
 
