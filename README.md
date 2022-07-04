@@ -1,7 +1,7 @@
 # "" Brick Breaker""" ( proyecto2022 )
 
-  Esta pagina consiste en el desarrollo de la primera parte de un juego conocido como " Brick Breaker ",
-  en esta  parte de proyecto se podra encontrar el codigo minimo indispensable para la estructura 
+  Esta página consiste en el desarrollo de la primera parte de un juego conocido como " Brick Breaker ",
+  en esta  parte de proyecto se podra encontrar el código mínimo indispensable para la estructura 
   principal del diseño de nuestra pagina web. 
 
    ## Autores:

@@ -1,6 +1,18 @@
-//Para comenzar a dibujar, creamos una variable canvas a la cual hacemos referencia con el document.getElementById
-//Creamos la variable context ctx para poder acceder a todas los metodos particulares del canvas
 
+/**
+ *
+ * Para comenzar a dibujar, creamos una variable canvas a la cual hacemos referencia con el document.getElementById
+ * Creamos la variable context ctx para poder acceder a todas los metodos particulares del canvas
+ * **/
+//
+//
+
+/**
+ *
+ * Funcion destinada al mensaje que ve el usuario cuando ingresa en la pagina de juego
+ * @method welcome
+ *
+ */
 function welcome(){
 
     if ( localStorage.getItem( "firstLogin" )  == 1 ){
@@ -14,6 +26,7 @@ function welcome(){
 
 
 var canvas = document.getElementById("lienzo");
+
 var ctx = canvas.getContext("2d");
 
 var vidas = 3;
@@ -186,8 +199,11 @@ function keyUpHandler(event) {
     }
 }
 
+/**
+ * Definimos un objeto ladrillo y dibujamos el cuadro donde guardaremos las filas y columnas de ladrillos
+ * @type {{ancho: number, alto: number}}
+ */
 
-//Definimos un objeto ladrillo y dibujamos el cuadro donde guardaremos las filas y columnas de ladrillos
 
 var ladrillo = {
     alto: 20,
@@ -201,9 +217,9 @@ var espadioIzquierdo = 30;
 
 //Pasamos por las filas / columnas y creamos los ladrillos
 var cuadroDLadrillos = [];
-for (i = 0; i < columnas; i++) {
+for (var i = 0; i < columnas; i++) {
     cuadroDLadrillos[i] = [];
-    for (j = 0; j < filas; j++) {
+    for (var j = 0; j < filas; j++) {
         cuadroDLadrillos[i][j] = {x: 0, y: 0, status: 1};
     }
 }
@@ -217,8 +233,9 @@ for (i = 0; i < columnas; i++) {
  *
  */
 function dibujarCuadroDeLadrillos() {
-    for (h = 0; h < columnas; h++) {
-        for (m = 0; m < filas; m++) {
+
+    for (var h = 0; h < columnas; h++) {
+        for (var m = 0; m < filas; m++) {
             if (cuadroDLadrillos[h][m].status == 1 ){
 
                 var ladrilloX = (h * (ladrillo.ancho + espacio)) + espadioIzquierdo;
@@ -260,12 +277,17 @@ function validar(){
     }
 }
 
-
+/**
+ *
+ * Armamos la funcion para detectar la colision de la bola en los ladrillos
+ * @method colision
+ *
+ */
 
 function colision(){
 
-    for(c=0; c<columnas; c++) {
-        for(r=0; r<filas; r++) {
+    for(var c=0; c<columnas; c++) {
+        for(var r=0; r<filas; r++) {
             var b = cuadroDLadrillos[c][r];
             if(b.status == 1) {
                 if(x > b.x && x < b.x+ladrillo.ancho && y > b.y && y < b.y+ladrillo.alto) {
@@ -283,6 +305,12 @@ function colision(){
     }
 }
 
+/**
+ *
+ * @method dibujar1
+ * @type {{dibujar1: lifeBAR.dibujar1}}
+ *
+ */
 var lifeBAR = {
 
     dibujar1: function () {
@@ -302,6 +330,11 @@ var lifeBAR = {
 
 
 }
+
+/**
+ * @method dibujar1
+ * @type {{puntos: number, dibujar1: puntaje.dibujar1}}
+ */
 
 var puntaje = {
     puntos: 0,
